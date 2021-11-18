@@ -37,7 +37,7 @@ self.addEventListener( 'install', e => {
 self.addEventListener( 'activate' , e => {
     const respuesta = caches.keys().then( keys => {
         if( keys !== STATIC_CACHE && keys.includes('static')){
-            return caches.delete(key);
+            return caches.delete(keys);
         }
     })
     e.waitUntil( respuesta );
