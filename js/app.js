@@ -1,6 +1,7 @@
 var url = window.location.href;
 var swLocation = '/tiwttor2/sw.js';
 
+console.log(url);
 if(navigator.serviceWorker){
     if ( url.includes('localhost') ){
         swLocation = '/sw.js';
